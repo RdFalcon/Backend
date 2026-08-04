@@ -7,8 +7,13 @@ import Footer from '../../Component/Footer';
 import Sidebar from '../../Component/Sidebar';
 import "./App.css"
 import CreatePost from '../../Component/CreatePost';
+import Post from '../../Component/Post';
+import PostList from '../../Component/PostList';
+import { useState } from 'react';
 
 function App() {
+
+  const [selectedTab,setSelectedTab]=useState("Home");
   
 
   return (
@@ -19,8 +24,12 @@ function App() {
         
         <div className='Content'>
         <Header></Header>
-        {/* <CreatePost></CreatePost> */}
+        {selectedTab=="Home"?  <PostList></PostList>: <CreatePost></CreatePost>}
+
+       
+      
         <Footer></Footer>
+
         </div>
       </div> 
 
