@@ -14,13 +14,14 @@ import { useState } from 'react';
 function App() {
 
   const [selectedTab,setSelectedTab]=useState("Home");
+  const [current,setCurrent]=useState("active");
   
 
   return (
     
 
       <div className='app-container'>
-           <Sidebar></Sidebar>
+           <Sidebar  setSelectedTab={setSelectedTab}  setCurrent={setCurrent} current={current} selectedTab={selectedTab} ></Sidebar>
         
         <div className='Content'>
         <Header></Header>
