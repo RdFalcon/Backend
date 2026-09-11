@@ -11,7 +11,8 @@ return (
 }
 function Cart(props){
 const[value,setValue]=useState(props.list);
-const inputRef=useRef("");
+const[input1,setinput1]=useState("");
+
 
 console.log(value);
 
@@ -40,16 +41,24 @@ return (
 
     }} > Refresh</button>
 
-    <input type="text" placeholder='type your Detail'   ref={inputRef} onChange={function(){
-      return console.log(inputRef.current.value);
+    <input type="text" placeholder='type your Detail'  onKeyDown={function(event){
+      console.log(event.key);
+      if(event.key==="Enter"){
+        setValue([...value,input1]);
+      setinput1("");
+      }
+    }}     value={input1} onChange={function(event){
+       return setinput1(event.target.value);
+     
     }}    />
     <button  onClick={function(){
-
-      value.push(inputRef.current.value);
-      console.log("i am list here",props.list)
+      setValue([...value,input1]);
+      setinput1("");
+      // value.push(inputRef.current.value);
+      // console.log("i am list here",props.list)
       
       
-    }}   >Add </button>
+    }}   >Add1 </button>
 
   </div>
 )
