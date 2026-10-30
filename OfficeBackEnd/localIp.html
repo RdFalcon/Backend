@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>My Network Addresses</h2>
+
+    <script>
+        let pc = new RTCPeerConnection({
+    iceServers: []
+});
+
+pc.createDataChannel("test");
+
+pc.onicecandidate = function (event) {
+    if (event.candidate) {
+        console.log("Candidate:", event.candidate.candidate);
+        console.log("Address:", event.candidate.address);
+    }
+};
+
+pc.createOffer().then(function (offer) {
+    return pc.setLocalDescription(offer);
+});
+
+
+
+    </script>
+</body>
+</html>
