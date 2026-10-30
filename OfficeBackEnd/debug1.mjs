@@ -1,0 +1,1 @@
+export const checking="HoneyBee";
