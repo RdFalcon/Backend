@@ -1,8 +1,8 @@
 export function getForm(addresses = [], id) {
 
   let address = {
-    id: '',
-    firstname: '',
+    id: 'please write id',
+    firstname: 'please write first name',
     lastname: '',
     street: '',
     city: '',

@@ -9,11 +9,14 @@ let addresses = addressesData;
 const server = createServer(function(request, response) {
 
   const parts = request.url.split("/");
+ 
+console.log("hello i am at this part",parts);
 
   if (parts.includes("delete")) {
 
     addresses = deleteAddress(addresses, parts[2]);
-    redirect(response, "/");
+    // redirect(response, "/");
+    send(response, getList(addresses));
 
   } else if (parts.includes("new")) {
 
@@ -45,13 +48,14 @@ function send(response, responseBody) {
 
 }
 
-function redirect(response, to) {
+function redirect(response, root) {
 
   response.writeHead(302, {
-    location: to,
+    location: root,
     "content-type": "text/plain"
   });
 
   response.end("302 Redirecting");
 
 }
+console.log("this is update");
