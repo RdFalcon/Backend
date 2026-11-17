@@ -11,7 +11,7 @@ id: 2,
     firstname: "Ram",
     lastname: "Sharma",
     street: "Baneshwor",
-    city: "Kathmandu",
+    city: "oman",
     country: "Nepal"
 
 }];
