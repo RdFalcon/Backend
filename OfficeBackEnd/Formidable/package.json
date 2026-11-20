@@ -1,0 +1,16 @@
+{
+  "name": "formidable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Fromidable_index.js",
+  "scripts": {
+    "start": "node Fromidable_index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "formidable": "^3.5.4"
+  }
+}
