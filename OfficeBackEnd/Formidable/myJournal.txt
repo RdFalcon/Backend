@@ -1,0 +1,2 @@
+This is my journal entry about the promise in js
+hello hajur read this file for me

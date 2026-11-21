@@ -3,7 +3,8 @@ import formidable from "formidable";
 import {mkdir,rename} from "node:fs/promises";
 import path from "node:path";
 
-const uploadDir=path.join(process.cwd(),"uploads");
+const uploadDir=path.join(process.cwd(),"uploads");// uploadDir has power to 
+console.log("it is uploadDir",uploadDir);
 const server=createServer(async function(req,res){
     if(req.url=="/" && req.method=="GET"){
         res.writeHead(200,{"Content-Type":"text/html"});
